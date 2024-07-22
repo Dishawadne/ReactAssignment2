@@ -4,11 +4,12 @@ const TitleOnChange = () => {
   const [D, setD] = useState('');
   
   const handleButtonClick = () => {
-    document.title = D; // Set document title to the current value of D
+    document.title = D; 
   };
 
   const handleChange = (event) => {
-    setD(event.target.value); // Update D whenever input changes
+    setD(event.target.value); 
+
   };
 
   return (

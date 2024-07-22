@@ -29,7 +29,7 @@ function Login() {
 
   return (
     <div>
-      <h2>Login</h2>
+      <h2>Login form using props</h2>
       <form onSubmit={handleSubmit}>
         <label>Username:
           <input type="text"   name="username"value={user.username} onChange={handleChange}  />

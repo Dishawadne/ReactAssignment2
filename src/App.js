@@ -15,14 +15,15 @@ function App() {
   
   return (
     <div className="App">
-     {/* <Login/> */}
-{/* <LoginContext /> */}
-{/* <FormCC/> 
-<FormFC/> */}
- {/* <RefLogin/> */}
- {/* <TitleFirstTime/> */}
- {/* <TitleEveryRender/>  */}
- {/* <TitleOnChange/> */}
+     <Login/>
+     <hr></hr>
+<LoginContext /><hr></hr>
+<FormCC/> <hr></hr>
+<FormFC/><hr></hr>
+ <RefLogin/> <hr></hr>
+ <TitleFirstTime/><hr></hr>
+ <TitleEveryRender/> <hr></hr>
+  <TitleOnChange/>
     </div>
   );
 }

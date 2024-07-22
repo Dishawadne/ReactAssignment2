@@ -1,9 +1,8 @@
-import { createContext } from "react";
+import { createContext } from 'react';
 
-const DataContext =createContext(
-    {
-        name:"",
-        age:""
-    });
+const DataContext = createContext({
+    username: '',
+    password: ''
+});
 
-    export default DataContext;
+export default DataContext;

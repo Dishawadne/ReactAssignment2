@@ -1,12 +1,15 @@
 import { Component } from "react";
 
+import WelcomeCC from "./WelcomeCC";
+
 export default class FormCC extends Component
 {
     state={
         name:"",
         address:"",
         pincode:"",
-        phoneNo:""
+        phoneNo:"",
+        submitted: false
     }
         handleChange=(event)=>
             {
@@ -14,29 +17,33 @@ export default class FormCC extends Component
            
            this.setState({[event.target.name]:event.target.value})
                
-            
-               
-           }
+             }
            submitData =(event)=>
            {
                console.log("Form is submited");
-               console.log(this.state)
-               var emp =  JSON.stringify(this.state);
-               console.log(emp)
+              
                event.preventDefault();
-
-               this.setState({
-                name:"",
-        address:"",
-        pincode:"",
-        phoneNo:""
-              });
+               this.setState({ submitted: true })
+            //    this.setState({
+            //     name:"",
+            //    address:"",
+            //    pincode:"",
+            //     phoneNo:""
+            //   });
            }
+
+           
            render()
            {
+            if (this.state.submitted) {
+                return <WelcomeCC  data={this.state} />;
+            }
+           
+           
             return(
                 <>
                 <form  onSubmit={this.submitData}> 
+                    <h2>Login form using class Component</h2>
                     <div>
                         <label> Enter Name </label>
        <input type="text" name="name" value={this.state.name}
@@ -65,3 +72,4 @@ export default class FormCC extends Component
             )
     }
 }
+
